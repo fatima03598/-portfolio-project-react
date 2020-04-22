@@ -1,0 +1,39 @@
+{
+    "name": "Fatima",
+    "pic": "../portfolio/Fatimaimg.jpg",
+    "about":"A resilient and inquisitive Neuroscience graduate with strong technical and logical thinking skills, and the ability      process any task or any situation presented with. Experience in thinking outside the box to effectively achieve targets throughout my university degree and working as a temporary Production Assistant. Currently searching for suitable roles in technology industry, to strengthen my skills and pursue personal goals.",
+    "projects": [
+        {
+            "title": "",
+            "language": "",
+            "about": "",
+            "url": ""
+        },
+        {
+            "title": "",
+            "language": "",
+            "about": "",
+            "url": ""
+        }
+    ],
+    "skills": [
+        {
+            "title": "Javascript",
+            "description": ""
+        },
+        {
+            "title": "",
+            "description": ""
+        }
+    ],
+    "contacts": [
+        {
+            "name": "GitHub",
+            "url": ""
+        },
+        {
+            "name": "Linkedln",
+            "url": ""
+        }
+    ]
+}
