@@ -8,11 +8,11 @@ import NavBar from './components/NavBar'
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    this.main = React.createRef()
     this.state = {
-        data: null
-
+        data: null,
     }
     this.getData = this.getData.bind(this)
   }
@@ -28,12 +28,22 @@ class App extends Component {
     this.getData()
   }
 
+  handleScroll = e => {
+    e.preventDefault();
+    const main = this.main.current;
+    window.scrollTo({
+      top: main.offsetTop,
+      left: 0,
+      behavior: "instant"
+    });
+  };
+
   render () {
     console.log(this.state.data)
     return (
-      <div className="App">
+      <div className="App"  ref={this.main}>
         <Router>           
-          <NavBar data={this.state}/>          
+          <NavBar data={this.state} handleScroll={this.handleScroll}/>          
           <SearchBar/>
           <Homepage/>
           <About/>
