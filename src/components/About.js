@@ -32,7 +32,6 @@ import Skills from './Skills'
             </Element>
 
          </React.Fragment>
-        )
     }
 }
 
