@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/App.css';
 import Homepage from './container/Homepage'
-import About from './components/About'
-import Projects from './components/Projects'
-import SearchBar from './components/Searchbar'
+
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Projects from './components/Projects';
+import About from './components/About';
 import NavBar from './components/NavBar'
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import Footer from './components/Footer';
+import Contact from './components/Contact';
+
 
 class App extends Component {
   constructor(props){
     super(props);
     this.main = React.createRef()
     this.state = {
-        data: null,
+        data: [],
+        homepay:'yes'
     }
-    this.getData = this.getData.bind(this)
   }
 
-  getData(){
-    fetch("https://raw.githubusercontent.com/fatima03598/-portfolio-project-react/master/package.json")
-    .then(response => response.json())
-    .then(data => this.setState({data: data}))
-    .catch(error => console.log(error))
-  }
 
   componentDidMount(){
-    this.getData()
+    fetch("https://raw.githubusercontent.com/fatima03598/-portfolio-project-react/rorie-update/Fatima.json")
+    .then(response => response.json())
+    .then(data => this.setState({data: data},()=> console.log(this.state.data)))
+    .catch(error => console.log(error))
   }
 
   handleScroll = e => {
@@ -39,16 +39,19 @@ class App extends Component {
   };
 
   render () {
-    console.log(this.state.data)
+    console.log(this.state.data.about)
+
     return (
       <div className="App"  ref={this.main}>
-        <Router>           
-          <NavBar data={this.state} handleScroll={this.handleScroll}/>          
-          <SearchBar/>
-          <Homepage/>
-          <About/>
-          <Projects/>
-        </Router> 
+          <Router> 
+           <Route exact path='/'  data={this.state.data} render={(props) => (<Homepage {...props} data={this.state.data} /> )} />
+           <NavBar  handleScroll={this.handleScroll}/>  
+           <Route   render={(props) => (<About {...props}  about={this.state.data.about}  skills={this.state.data.skills} /> )} />
+           <Route exact  component={Projects} />
+           <Route exact component={Contact}/>
+          </Router>  
+          <Footer/> 
+     
       </div>
     );
   }

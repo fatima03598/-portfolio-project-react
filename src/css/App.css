@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+  background-color: #42a680;
+  margin-top: 0px;
+}
+
+
+#Home, #About, #Projects, #Contact {
+  height: 100vh;
+  display: flex;
+  background-color:rebeccapurple;
+}
+
+/* #About {
+  justify-content: space-evenly;
+} */
+
+#Home {
+justify-content: center;
+align-items: center;
+/* background-color: #2A4E6D; */
+}
+
+.Footer{
+  display: flex;
+  align-items: flex-end;
+}
+
+#Home .home-menu {
+  /* display: flex; */
+  justify-content: space-evenly;
+}
+
+

@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
 import { Element } from 'react-scroll'
 
-class Projects extends Component {
+ class Contact extends Component {
     render() {
         return (
             <React.Fragment>
 
-            <Element id='Projects' name='Projects'>
-            <div>
-                <p>Projects</p>
-            
-            </div>
+            <Element id='Contact' name='Contact'>
+                <div>
+                    <h1>This is contacts</h1>
+                </div>
             </Element>
 
             </React.Fragment>
@@ -18,4 +17,4 @@ class Projects extends Component {
     }
 }
 
-export default Projects
+export default Contact

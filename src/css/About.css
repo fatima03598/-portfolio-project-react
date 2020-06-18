@@ -1,0 +1,12 @@
+.About-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 232, 233);
+    margin: 0px 130px 90px 130px;
+    padding: 10px;
+    /* box-shadow: 5px 5px 5px grey; */
+    flex-direction: column;
+    border: solid 4px #1d1b29;
+   
+}
