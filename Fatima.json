@@ -18,13 +18,42 @@
     ],
     "skills": [
         {
-            "title": "Javascript",
-            "description": ""
+            "type": "HTML",
+            "level": 90
         },
         {
-            "title": "",
-            "description": ""
+            "type": "CSS",
+            "level": 80
+        },
+        {
+            "type": "JavaScript",
+            "level": 70
+        },
+        {
+            "type": "jQuery",
+            "level": 70
+        },
+        {
+            "type": "Node.js",
+            "level": 70
+        },
+        {
+            "type": "Express.js",
+            "level": 70
+        },
+        {
+            "type": "Python",
+            "level": 60
+        },
+        {
+            "type": "Django",
+            "level": 50
+        },
+        {
+            "type": "Flask",
+            "level": 70
         }
+
     ],
     "contacts": [
         {

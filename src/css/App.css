@@ -4,11 +4,16 @@
   margin-top: 0px;
 }
 
-
-#Home, #About, #Projects, #Contact {
+#Home {
   height: 100vh;
   display: flex;
   background-color:rebeccapurple;
+}
+
+#About, #Projects, #Contact {
+  height: 100vh;
+  display: flex;
+  background-color:rgb(165, 159, 170);
 }
 
 /* #About {
