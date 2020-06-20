@@ -16,15 +16,16 @@ class App extends Component {
     this.main = React.createRef()
     this.state = {
         data: [],
-        homepay:'yes'
+        homepay:'yes',
+        skills:null
     }
   }
 
 
   componentDidMount(){
-    fetch("https://raw.githubusercontent.com/fatima03598/-portfolio-project-react/rorie-update/Fatima.json")
+    fetch("https://raw.githubusercontent.com/fatima03598/-portfolio-project-react/master/Fatima.json")
     .then(response => response.json())
-    .then(data => this.setState({data: data},()=> console.log(this.state.data)))
+    .then(data => this.setState({data: data, skills: data.skills},()=> console.log(this.state.data)))
     .catch(error => console.log(error))
   }
 
@@ -46,7 +47,7 @@ class App extends Component {
           <Router> 
            <Route exact path='/'  data={this.state.data} render={(props) => (<Homepage {...props} data={this.state.data} /> )} />
            <NavBar  handleScroll={this.handleScroll}/>  
-           <Route   render={(props) => (<About {...props}  about={this.state.data.about}  skills={this.state.data.skills} /> )} />
+           <Route   render={(props) => (<About {...props}  about={this.state.data.about}  skills={this.state.skills} /> )} />
            <Route exact  component={Projects} />
            <Route exact component={Contact}/>
           </Router>  

@@ -9,7 +9,6 @@ import Skills from './Skills'
     
 
     render() {
-        console.log(this.props.about)
         return (
             <React.Fragment>
 
@@ -22,7 +21,7 @@ import Skills from './Skills'
                 <p>{this.props.about ? this.props.about : null}</p>
                </section>
                <section className='About-skills'>
-                   <Skills/>
+                   <Skills skills={this.props.skills}/>
 
                </section>
 
@@ -32,7 +31,7 @@ import Skills from './Skills'
             </Element>
 
          </React.Fragment>
-    }
+        )}
 }
 
 export default About
