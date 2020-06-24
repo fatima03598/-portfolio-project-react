@@ -8,6 +8,7 @@ import About from './components/About';
 import NavBar from './components/NavBar'
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import { Container } from 'reactstrap';
 
 
 class App extends Component {
@@ -43,7 +44,9 @@ class App extends Component {
     console.log(this.state.data.about)
 
     return (
+      
       <div className="App"  ref={this.main}>
+        
           <Router> 
            <Route exact path='/'  data={this.state.data} render={(props) => (<Homepage {...props} data={this.state.data} /> )} />
            <NavBar  handleScroll={this.handleScroll}/>  
@@ -52,7 +55,7 @@ class App extends Component {
            <Route exact component={Contact}/>
           </Router>  
           <Footer/> 
-     
+      
       </div>
     );
   }

@@ -16,7 +16,7 @@ import Skills from './Skills'
             
            
                <div className='About-main'>
-                   <section className='About-me'>
+                <section className='About-me'>
                 <h3>About</h3>
                 <p>{this.props.about ? this.props.about : null}</p>
                </section>

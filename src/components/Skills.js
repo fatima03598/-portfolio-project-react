@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import { Element } from 'react-scroll'
+import '../css/About.css'
+
+
 
  class Skills extends Component {
+
     render() {
+        
         return (
             <React.Fragment>
 
             <Element id='Skills' name='Skills'>
-            <div>    
-             <h1>Skills</h1>
-        {this.props.skills ? this.props.skills.map(item => <h1>{item.title}</h1>) : null }
+            <div className='skilled'> 
+            <ul className="skills">
+        {this.props.skills ? this.props.skills.map((skill, index) => <li key={skill.type} style={{ width: `${skill.level}%` }}> <p>{skill.type}</p></li>) : null }
+        </ul>
             </div>
             </Element>
 

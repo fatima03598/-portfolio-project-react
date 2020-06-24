@@ -2,18 +2,37 @@
   text-align: center;
   background-color: #42a680;
   margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+ 
+  
+  
 }
 
 #Home {
   height: 100vh;
   display: flex;
-  background-color:rebeccapurple;
+  background-image: url('/cool-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
 }
 
 #About, #Projects, #Contact {
   height: 100vh;
+
   display: flex;
-  background-color:rgb(165, 159, 170);
+  background-image: url('/cool-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+#Skills {
+ display: flex;
+ width: 100%;
+
 }
 
 /* #About {
