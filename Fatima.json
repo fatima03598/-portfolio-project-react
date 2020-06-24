@@ -5,14 +5,16 @@
     "projects": [
         {
             "title": "",
-            "language": "",
-            "about": "",
+            "languages": "",
+            "main-technologies":"",
+            "description": "",
             "url": ""
         },
         {
             "title": "",
-            "language": "",
-            "about": "",
+            "languages": "",
+            "main-technologies":"",
+            "description": "",
             "url": ""
         }
     ],
