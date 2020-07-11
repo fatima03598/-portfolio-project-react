@@ -2,20 +2,43 @@
     "name": "Fatima",
     "pic": "../portfolio/Fatimaimg.jpg",
     "about":"A resilient and inquisitive Neuroscience graduate with strong technical and logical thinking skills, and the ability      process any task or any situation presented with. Experience in thinking outside the box to effectively achieve targets throughout my university degree and working as a temporary Production Assistant. Currently searching for suitable roles in technology industry, to strengthen my skills and pursue personal goals.",
-    "projects": [
+    "solo-projects": [
         {
-            "title": "",
-            "languages": "",
-            "main-technologies":"",
-            "description": "",
-            "url": ""
+            "title": "My Recipe app",
+            "languages": ["JavaScript"],
+            "main-technologies":["React", "Node.js", "Express.js","Knex", "Postgres"],
+            "description": "Recipe website where a user can  add recipes and also browse through all the recipes",
+            "url": "https://github.com/fatima03598/my-recipe-app"
+        }
+    ],
+    "group-projects": [
+        {
+            "title": "Blog Social App",
+            "languages": ["JavaScript"],
+            "main-technologies":["Node.js", "Express.js", "Pug"],
+            "description": "Blog website where a user can add a post, with a username and also include gif or images. Also the user can browse through otehr users post and comment or look at others comments",
+            "url": "https://github.com/fatima03598/project-1-futureproof"
         },
         {
-            "title": "",
-            "languages": "",
-            "main-technologies":"",
-            "description": "",
-            "url": ""
+            "title": "Quiz App",
+            "languages": ["JavaScript"],
+            "main-technologies":["React", "Jest", "Enzyme"],
+            "description": " Online quiz that can be played solo or in group, and topic can be picked ",
+            "url": "https://github.com/fatima03598/react-quiz-app"
+        },
+        {
+            "title": "Habit App",
+            "languages": ["JavaScript"],
+            "main-technologies":["React", "Jest", "Enzyme", "Node.js", "Express.js", "Postgres", "Knex", "Mocha", "Chai"],
+            "description": " Habit tracker app where registered user can create habits and track them by picking a frequency, they are also able to see their strikes",
+            "url": "https://github.com/fatima03598/habit-app"
+        },
+        {
+            "title": "Recommendation App",
+            "languages": ["JavaScript", "Python"],
+            "main-technologies":["React", "Jest", "Enzyme", "Flask", "SQlite", "Numpy & Panda", "NLTK", "Pytest"],
+            "description": " Recommendation App, where registered user can get recommendations based on their moods, and also search movies and add to their mood favorites ",
+            "url": "https://github.com/fatima03598/Entertain.Me-Appp"
         }
     ],
     "skills": [
@@ -60,11 +83,11 @@
     "contacts": [
         {
             "name": "GitHub",
-            "url": ""
+            "url": "https://github.com/fatima03598"
         },
         {
-            "name": "Linkedln",
-            "url": ""
+            "name": "Linkedin",
+            "url": "https://www.linkedin.com/in/fatima-i-85369717b/"
         }
     ]
 }
