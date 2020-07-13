@@ -18,7 +18,9 @@ class App extends Component {
     this.state = {
         data: [],
         homepay:'yes',
-        skills:null
+        skills:null,
+        soloProjects:null,
+        groupProjects:null
     }
   }
 
@@ -26,7 +28,7 @@ class App extends Component {
   componentDidMount(){
     fetch("https://raw.githubusercontent.com/fatima03598/-portfolio-project-react/master/Fatima.json")
     .then(response => response.json())
-    .then(data => this.setState({data: data, skills: data.skills},()=> console.log(this.state.data)))
+    .then(data => this.setState({data: data, skills: data.skills, soloProjects:data["solo-projects"], groupProjects:data["group-projects"]},()=> console.log(this.state.data)))
     .catch(error => console.log(error))
   }
 
@@ -42,6 +44,7 @@ class App extends Component {
 
   render () {
     console.log(this.state.data.about)
+     console.log(this.state.soloProjects)
 
     return (
       
@@ -51,7 +54,7 @@ class App extends Component {
            <Route exact path='/'  data={this.state.data} render={(props) => (<Homepage {...props} data={this.state.data} /> )} />
            <NavBar  handleScroll={this.handleScroll}/>  
            <Route   render={(props) => (<About {...props}  about={this.state.data.about}  skills={this.state.skills} /> )} />
-           <Route exact  component={Projects} />
+           <Route exact  render={(props) => (<Projects {...props}  group={this.state.groupProjects}  solo={this.state.soloProjects} /> )}/>
            <Route exact component={Contact}/>
           </Router>  
           <Footer/> 
