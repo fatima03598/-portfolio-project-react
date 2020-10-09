@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Element } from 'react-scroll'
 import '../css/Projects.css'
 
+
 class Projects extends Component {
     constructor(props){
         super(props);
@@ -53,21 +54,37 @@ class Projects extends Component {
 
             <Element id='Projects' name='Projects'>
             <div className='Projects'>
+              <h1>Projects</h1>
                
-                <h1>Solo Projects</h1>
+                <h2>Solo</h2>
+                
                 <section className='soloProjects'>
-                {this.props.solo ?  this.props.solo.map((project, index) => <div className="projectImage" >
-                                                                        <h3>{project.title}</h3>
+                {this.props.solo ?  this.props.solo.map((project, index) => <div className="projectImage" key={index} >
+                                                                        <div className='titleSection'>
+                                                                          <div className='circles'>
+                                                                            <div className='circle'></div>
+                                                                            <div className='circle'></div>
+                                                                            <div className='circle'></div>
+                                                                          </div>
+                                                                        <h4>{project.title}</h4>
+                                                                        </div>
                                                                         <h5>Main Technologies:</h5> <p>{project["main-technologies"].join(', ')}</p>
-        <div className="hoverDescription"><p>{project.description}</p><a  target="_blank" rel="noopener noreferrer" href={project.url}>repo link</a></div></div>) : null}
+        <div className="hoverDescription"><p className='description'>{project.description}</p><a  target="_blank" rel="noopener noreferrer" href={project.url}>repo link</a></div></div>) : null}
                 </section>
-                <h1>Group Projects</h1>
+                <h2>Group </h2>
                 <section className='groupProjects'>
-        {this.props.group ?  this.props.group.map((project, index) =><div className="projectImage"  >
-                                                                <h3>{project.title}</h3> 
+        {this.props.group ?  this.props.group.map((project, index) =><div className="projectImage" key={index}  >
+                                                                         <div className='titleSection'>
+                                                                          <div className='circles'>
+                                                                            <div className='circle'></div>
+                                                                            <div className='circle'></div>
+                                                                            <div className='circle'></div>
+                                                                          </div>
+                                                                <h4>{project.title}</h4>
+                                                                </div> 
                                                                 <h5>Main Technologies:</h5> 
                                                                 <p>{project["main-technologies"].join(', ')}</p>
-        <div className='hoverDescription'><p>{project.description}</p> <a target="_blank" rel="noopener noreferrer" href={project.url}>repo link</a></div></div>) : null}
+        <div className='hoverDescription'><p className='description' >{project.description}</p> <a target="_blank" rel="noopener noreferrer" href={project.url}>repo link</a></div></div>) : null}
                 </section>
             
             </div>

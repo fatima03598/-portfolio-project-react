@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Homepage from './container/Homepage'
-
+// contacts={this.state.contacts}
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Projects from './components/Projects';
 import About from './components/About';
@@ -20,7 +20,8 @@ class App extends Component {
         homepay:'yes',
         skills:null,
         soloProjects:null,
-        groupProjects:null
+        groupProjects:null,
+        contacts:null
     }
   }
 
@@ -28,7 +29,12 @@ class App extends Component {
   componentDidMount(){
     fetch("https://raw.githubusercontent.com/fatima03598/-portfolio-project-react/master/Fatima.json")
     .then(response => response.json())
-    .then(data => this.setState({data: data, skills: data.skills, soloProjects:data["solo-projects"], groupProjects:data["group-projects"]},()=> console.log(this.state.data)))
+    .then(data => this.setState({
+      data: data, 
+      skills: data.skills, 
+      soloProjects:data["solo-projects"], 
+      groupProjects:data["group-projects"], 
+      contacts: data.contacts},()=> console.log(this.state.contacts)))
     .catch(error => console.log(error))
   }
 
@@ -55,7 +61,7 @@ class App extends Component {
            <NavBar  handleScroll={this.handleScroll}/>  
            <Route   render={(props) => (<About {...props}  about={this.state.data.about}  skills={this.state.skills} /> )} />
            <Route exact  render={(props) => (<Projects {...props}  group={this.state.groupProjects}  solo={this.state.soloProjects} /> )}/>
-           <Route exact component={Contact}/>
+           <Route exact  render={(props) => (<Contact {...props}   contacts={this.state.contacts}  /> )}/>
           </Router>  
           <Footer/> 
       

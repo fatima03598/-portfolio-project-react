@@ -7,7 +7,11 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
+    "emailjs": "^3.2.1",
+    "emailjs-com": "^2.4.1",
     "enzyme": "^3.11.0",
+    "i": "^0.3.6",
+    "npm": "^6.14.6",
     "particlesjs": "^2.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -17,7 +21,7 @@
     "react-scripts": "3.4.1",
     "react-scroll": "^1.7.16",
     "react-skillbars": "^1.6.1",
-    "reactstrap": "^8.4.1"
+    "reactstrap": "^8.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
