@@ -16,10 +16,11 @@ let Link = Scroll.Link;
             <React.Fragment>
             <Element id='Home' name='Home'>
             <div className='homepage'>
+            <div className="horizontal"></div> 
                 <section className='home-main'>
                     <section className='home-about'>
                         <div className='about-image'>
-                            <img  src='/me.jpg' alt='me'/>
+                            <img  src='/me.png' alt='me'/>
                             <h1>Fatima Abdullahi</h1>
                             <h2>Software Engineering Trainee</h2>
                         </div>

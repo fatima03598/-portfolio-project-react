@@ -2,22 +2,83 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(222, 232, 233);
-    margin: 0px 20px 50px 20px;
-    padding: 10px;
-    /* box-shadow: 5px 5px 5px grey; */
+    background-color: #ffffff;
+    margin: 5vh 5vw 0vh 5vw;
+    padding: 1.5em;
+    /* padding: 0, 1.3em, 0, 1.3em; */
     flex-direction: column;
-    border: solid 4px #1d1b29;
-    height: 100%;
+    /* height: 100%; */
+    overflow: hidden;
    
 }
+
+.horizontal-about{ 
+	border-top:  6px solid rgba(2, 6, 19, 0.795); 
+	width: 100vw; 
+	height: 5px;
+	padding: 0px;
+	position:absolute; 
+    top: 50%; 
+    z-index: -1;
+} 
 .About-skills, .About-me {
     display: flex;
-    flex: 1;
     width: 100%;
     flex-direction: column;
+    /* height: 100%; */
+}
+
+.About-skills h3 {
+    border-bottom: 1px solid black;
+    margin: 1em;
+    /* align-self: center; */
+}
+.About-me {
     justify-content: center;
-    height: 100%;
+    /* height: 50%; */
+    padding-top: 0;
+    flex: 1;
+}
+
+.About-skills {
+    align-items: center;
+    flex: 2;
+    /* height: 50%; */
+}
+
+/* 
+.secondRow, .thirdRow {
+    border-left: 2.3px solid rgb(149, 34, 172);
+   
+} */
+
+
+
+.About-me h1 {
+    width: 100%;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.4em;
+   
+}
+
+
+.skills-icon {
+    width: 40px;
+    margin: 0 auto ;
+   display: block;
+
+}
+
+/* #firstBox, th:nth-child(2), th:nth-child(3) {
+    background-color:#fff1e6;
+} */
+
+.skillsIcon {
+    width: 48px;
+
+    /* margin: 0 auto ;
+   display: block; */
+
 }
 
 
@@ -27,14 +88,53 @@
 
     }
 
+    th:not(.secondRow):not(.thirdRow) {
+        font-size: 15px;
+      
+     }
+
 }
 
 
-@media (max-width: 370px) {
+@media (max-width: 380px) {
     .About-main p{
         font-size: 10px;
 
     }
+    /* th:first-child h2  {
+        font-size: 20px;
+     
+     } */
+     .skillsIcon {
+        width: 35px;
+    
+        /* margin: 0 auto ;
+       display: block; */
+    
+    }
+    .skills-icon {
+        width: 30px;
+      
+    
+    }
+
+    .skill-main{
+        display: flex;
+        font-size: 15px;
+        flex-direction: row;
+    }
+    .skill-main img {
+        width: 26px ;
+    }
+
+    #javascriptLang h5 {
+        font-size: 10px;
+      
+    } 
+    #javascriptLang {
+        flex-direction: row;
+    }
+    
 
 }
 /* .About-me {
@@ -43,9 +143,12 @@
 .skills, .skilled {
     display: flex;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
     
 
 }
+
 
 .skills {
     flex-direction: column;
@@ -53,7 +156,105 @@
 }
 .skills li {
     background-color: rgb(70, 49, 70);
+    position:relative;
+    margin: 3px;
     border: solid 1px #1d1b29;
     text-align: center;
     color: rgb(222, 232, 233);
+    font-style: italic;
 }
+
+li span {
+    position: absolute;
+    bottom: 50%;
+    right: 5%;
+    font-size: 12px;
+    
+
+}
+
+.skill {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1.5em;
+
+ 
+}
+
+#javascriptLang, #pythonLang {
+ /* text-align: center; */
+ font-size: 17px;
+ /* margin: 0 auto; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ /* float: left; */
+}
+
+#javascriptLang h5 {
+    margin: 0% 2% 0% 2%;
+}   
+th:not(.secondRow):not(.thirdRow) {
+   font-size: 25px;
+   text-align: center;
+   vertical-align: middle;
+}
+
+
+ 
+.contentCell {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skillsBullet {
+    display: flex;
+    align-items: center;
+    
+}
+
+.languages {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+.javascript, .python {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+}
+
+.languageTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: text-bottom;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+
+.languageSkills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.unitarySkill {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em;
+    align-items: center;
+}
+
+.unitaryDes {
+    display: flex;
+    margin:  1em;
+    align-items: flex-end;
+    padding: 0;
+}
+

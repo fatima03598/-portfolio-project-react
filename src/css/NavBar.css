@@ -3,7 +3,8 @@
     /* align-content: space-around; */
     width: 100vw;
     justify-content: space-evenly;
-    background-color: rgb(49, 22, 77);
+    /* background-color: rgb(49, 22, 77); */
+    background-color: #6d6875;
     color: whitesmoke;
     position: sticky;
     height: 50px;

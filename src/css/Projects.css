@@ -3,17 +3,33 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.Projects h2 {
+    margin: 2%;
+  
 }
 
 .Projects h1 {
-    margin: 2%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5em;
+   /* background-color: blueviolet; */
 }
+
+
+
+
 
 #Projects {
     justify-content: center;
     align-items: center;
-    height: 100%;
+    
 }
+
 
 .soloProjects, .groupProjects {
     display: flex;
@@ -21,24 +37,57 @@
     justify-content: center;
     align-items: stretch;
     flex-direction: row;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .projectImage {
     position: relative;
-    background-color: teal;
+    background-color: whitesmoke;
+    border-radius: 15px;
     display: flex;
     flex: 1 0 21%;
     margin: 2%;
-    padding: 1.2%;
+    padding: 0.2%;
     height: auto;
     border: 2px solid black;
     flex-direction: column;
+    width: 100%;
     
 }
+.titleSection {
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #b5838d;
+    margin: 0px;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    
+}
+.circles {
+    display: flex;
+}
 
-.projectImage:hover {
-    /* opacity: 0.7; */
+.circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0.2em;
+}
+
+.circle:first-child {
+    background-color: #E05E5B;
+}
+.circle:nth-child(2) {
+    background-color: #E9BD0E;
+}
+
+.circle:last-child {
+    background-color: #74CF0E;
+}
+
+.projectImage p:not(.description), .projectImage h5 {
+    color: rgb(39, 37, 38);
     
 }
 
@@ -48,7 +97,8 @@
 .hoverDescription {
     display: none;
     position: absolute;
-    background-color: rgb(15, 54, 54);
+    background-color: #252525;
+    /* background-color: rgb(15, 54, 54); */
     align-items: center;
     justify-content: center;
     padding: 1.5%;
@@ -62,7 +112,9 @@
     opacity: 0.9;
     overflow: hidden;
     font-size: 12px;
-    color: whitesmoke;
+    color: white;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
 }
 
 .hoverDescription p {

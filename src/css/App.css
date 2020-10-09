@@ -1,27 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 .App {
   text-align: center;
-  background-color: #42a680;
+  /* background-color: #e5e5e5; */
+  background: #ED4264;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
   margin-top: 0px;
   display: flex;
   flex-direction: column;
   width: 100vw;
- 
+  font-family: 'Mulish', sans-serif;
   
   
 }
 
-#Home {
+ #Home, #About {
+   position: relative;
   height: 100vh;
   display: flex;
   background-image: url('/cool-background.png');
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
+  background-size: 100% 50%;
+ 
  
 }
 
-#About, #Projects, #Contact {
-  height: 100vh;
-
+ #Projects {
+  min-height: 100vh;
   display: flex;
   background-image: url('/cool-background.png');
   background-size: cover;
@@ -29,6 +37,15 @@
   margin: 0;
 }
 
+ #Contact {
+  display: flex;
+  background-image: url('/cool-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
 #Skills {
  display: flex;
  width: 100%;
@@ -48,6 +65,8 @@ align-items: center;
 .Footer{
   display: flex;
   align-items: flex-end;
+  background-color: ivory;
+  padding-left: 10px;
 }
 
 #Home .home-menu {

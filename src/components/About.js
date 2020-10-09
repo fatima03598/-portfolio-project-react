@@ -5,6 +5,7 @@ import Skills from './Skills'
 
 
 
+
  class About extends Component {
     
 
@@ -16,13 +17,13 @@ import Skills from './Skills'
             
            
                <div className='About-main'>
+               <div className="horizontal-about"></div> 
                 <section className='About-me'>
-                <h3>About</h3>
+                <h1>About</h1>
                 <p>{this.props.about ? this.props.about : null}</p>
                </section>
                <section className='About-skills'>
-                   <Skills skills={this.props.skills}/>
-
+               <Skills />
                </section>
 
  

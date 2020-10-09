@@ -1,0 +1,36 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contactIcon {
+    max-width: 70px;
+    margin: 15px;
+}
+
+img[alt='mail']:hover {
+    cursor:pointer;
+
+}
+@media (max-width: 400px) {
+    .contactIcon {
+        max-width: 50px;
+        margin: 10px;
+    }
+	
+}
+
+@media (max-width: 200px) {
+    .contactIcon {
+        max-width: 30px;
+        margin: 5px;
+    }
+	
+}
